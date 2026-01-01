@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'fs Tahoma 8px';
+    src: url('fsTahoma8px.woff2') format('woff2'),
+        url('fsTahoma8px.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
