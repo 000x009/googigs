@@ -21,7 +21,11 @@ const jobs = [
     },
     location: "San Francisco, CA",
     work_model: WorkModel.REMOTE,
-    tags: [{ id: "1", name: "Python" }],
+    tags: [
+      { id: "1", name: "Python" },
+      { id: "2", name: "React" },
+      { id: "3", name: "Node.js" },
+    ],
     salary_min: 100000,
     salary_max: 120000,
     slug: "senior-python-developer",

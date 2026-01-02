@@ -34,11 +34,13 @@ export function JobCard({ job }: IProps) {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-2">
-        {job.tags.slice(0, 3).map((tag) => (
-          <Badge key={tag.id}>{tag.name}</Badge>
-        ))}
-        <Button>Apply</Button>
+      <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          {job.tags.slice(0, 3).map((tag) => (
+            <Badge key={tag.id}>{tag.name}</Badge>
+          ))}
+        </div>
+        <Button className="cursor-pointer">Apply</Button>
       </div>
     </div>
   );
