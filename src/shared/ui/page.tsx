@@ -8,6 +8,8 @@ export function Page({
   className?: string;
 }) {
   return (
-    <div className={cn("flex flex-col h-screen", className)}>{children}</div>
+    <main className={cn("flex flex-col h-screen flex-1", className)}>
+      {children}
+    </main>
   );
 }

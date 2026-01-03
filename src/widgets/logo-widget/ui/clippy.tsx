@@ -3,7 +3,7 @@ import { Popover, PopoverContent, PopoverTrigger, Text } from "@/shared/ui";
 import animationData from "@/shared/assets/lottie/staple.json";
 import { essentialFileIcon } from "@/shared/assets/icons/essential-file-icon";
 
-export function Staple() {
+export function Clippy() {
   return (
     <div className="fixed bottom-8 right-10 hover:-translate-y-1 transition-all duration-300">
       <Popover>

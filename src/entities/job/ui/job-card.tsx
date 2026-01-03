@@ -3,14 +3,23 @@ import Image from "next/image";
 import { Text } from "@/shared/ui/text";
 import { Button } from "@/shared/ui";
 import { Badge } from "@/shared/ui/badge";
+import { cn } from "@/shared/lib/helpers/cn";
+import { formatJobName } from "@/entities/job/lib/formatJobName";
 
 interface IProps {
   job: IJob;
+  className?: string;
 }
 
-export function JobCard({ job }: IProps) {
+export function JobCard({ job, className, ...props }: IProps) {
   return (
-    <div className="flex gap-4 justify-between items-center border border-gray-200 p-4 w-full max-w-4xl">
+    <div
+      className={cn(
+        "flex gap-4 justify-between items-center border border-gray-200 p-4 w-full",
+        className,
+      )}
+      {...props}
+    >
       <div className="flex items-center gap-4">
         <Image
           src={job.company.logo_url}
@@ -22,7 +31,7 @@ export function JobCard({ job }: IProps) {
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <Text className="text-[16px]! font-bold!">
-              {job.title.toUpperCase()}
+              {formatJobName(job.title)}
             </Text>
             <Badge>{job.work_model.toUpperCase()}</Badge>
           </div>
@@ -40,7 +49,7 @@ export function JobCard({ job }: IProps) {
             <Badge key={tag.id}>{tag.name}</Badge>
           ))}
         </div>
-        <Button className="cursor-pointer">Apply</Button>
+        <Button className="cursor-pointer">Open</Button>
       </div>
     </div>
   );

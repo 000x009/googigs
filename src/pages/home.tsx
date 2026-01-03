@@ -3,7 +3,7 @@
 import { LogoWidget } from "@/widgets/logo-widget/ui/logo-widget";
 import { Page } from "@/shared/ui/page";
 import { SearchBosses } from "@/features/search-bosses";
-import { Staple } from "@/widgets/logo-widget/ui/staple";
+import { Clippy } from "@/widgets/logo-widget/ui/clippy";
 import { JobsList } from "@/widgets/jobs-list/ui/jobs-list";
 import { JobType, WorkModel } from "@/entities/job/model/types";
 
@@ -57,9 +57,11 @@ export default function HomePage() {
   return (
     <Page className="gap-8 relative">
       <LogoWidget />
-      <SearchBosses />
-      <Staple />
-      <JobsList jobs={jobs} />
+      <div className="flex flex-col gap-8 w-full justify-center items-center max-w-4xl mx-auto">
+        <SearchBosses />
+        <JobsList jobs={jobs} />
+      </div>
+      <Clippy />
     </Page>
   );
 }

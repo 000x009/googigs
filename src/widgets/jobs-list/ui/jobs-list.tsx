@@ -9,7 +9,7 @@ export function JobsList({ jobs }: IProps) {
   return (
     <div className="flex flex-col gap-4 w-full justify-center items-center">
       {jobs.map((job) => (
-        <JobCard key={job.id} job={job} />
+        <JobCard key={job.id} job={job} className="w-full" />
       ))}
     </div>
   );
