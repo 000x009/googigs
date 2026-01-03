@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./_fonts/tahoma/stylesheet.css";
 @import "tw-animate-css";
+@import "../shared/assets/styles/clerk.css";
 
 @custom-variant dark (&:is(.dark *));
 

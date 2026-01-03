@@ -1,0 +1,22 @@
+.cl-cardBox {
+  border-radius: 0 !important;
+}
+
+.cl-internal-1dauvpw {
+  display: none !important;
+}
+
+.cl-card {
+  border-radius: 0 !important;
+}
+
+.cl-button {
+  border-radius: 0 !important;
+  padding: 12px 8px !important;
+}
+
+.cl-formButtonPrimary {
+  background-color: #000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
