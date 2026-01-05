@@ -1,5 +1,4 @@
 import { cn } from "@/shared/lib/helpers/cn";
-import { Text } from "./text";
 
 interface IProps {
   children: React.ReactNode;
@@ -14,7 +13,7 @@ export function Badge({ children, className }: IProps) {
         className,
       )}
     >
-      <Text>{children}</Text>
+      {children}
     </div>
   );
 }

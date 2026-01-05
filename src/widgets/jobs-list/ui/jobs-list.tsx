@@ -1,4 +1,5 @@
 import { IJob } from "@/entities/job/model/types";
+import Link from "next/link";
 import { JobCard } from "@/entities/job/ui/job-card";
 
 interface IProps {
@@ -9,7 +10,14 @@ export function JobsList({ jobs }: IProps) {
   return (
     <div className="flex flex-col gap-4 w-full justify-center items-center">
       {jobs.map((job) => (
-        <JobCard key={job.id} job={job} className="w-full" />
+        <Link
+          href={`/jobs/${job.slug}`}
+          key={job.id}
+          className="w-full"
+          target="_blank"
+        >
+          <JobCard job={job} />
+        </Link>
       ))}
     </div>
   );

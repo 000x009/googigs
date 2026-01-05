@@ -1,9 +1,4 @@
-interface ICompany {
-  id: string;
-  name: string;
-  logo_url: string;
-  slug: string;
-}
+import { ICompany } from "@/entities/company/model/types";
 
 interface ITag {
   id: string;
@@ -23,17 +18,37 @@ export enum WorkModel {
   ON_SITE = "on_site",
 }
 
+export interface IRequirements {
+  description: string;
+}
+
+export interface IResponsibilities {
+  description: string;
+}
+
+export interface IBenefits {
+  id: string;
+  title: string;
+  description: string;
+}
+
 export interface IJob {
   id: string;
   title: string;
   description: string;
   company: ICompany;
+  position: string;
   location: string;
   salary_min: number;
   work_model: WorkModel;
+  requirements: IRequirements[];
+  responsibilities: IResponsibilities[];
+  benefits: IBenefits[];
   tags: ITag[];
   salary_max: number;
   slug: string;
   created_at: string;
   type: JobType;
+  applied_count: number;
+  currency: string;
 }

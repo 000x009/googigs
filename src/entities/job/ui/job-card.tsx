@@ -15,7 +15,7 @@ export function JobCard({ job, className, ...props }: IProps) {
   return (
     <div
       className={cn(
-        "flex gap-4 justify-between items-center border border-gray-200 p-4 w-full",
+        "flex gap-4 justify-between items-center border border-gray-200 p-4 w-full transition-all duration-300 hover:bg-muted cursor-pointer",
         className,
       )}
       {...props}
